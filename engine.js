@@ -16,9 +16,6 @@ module.exports = function(inputOptions) {
 
   function printOutput(returnValue) {
     Bluebird.resolve(returnValue)
-      .catch(function() {
-        return null;
-      });
   }
 
   function printError(error) {
@@ -47,13 +44,13 @@ module.exports = function(inputOptions) {
         process.exit(1);
       } else if (Object.keys(namedArgs).length > 0) {
         //we have named arguments. Let's pass these as an object to the function
-        printOutput(func(namedArgs));
+        func(namedArgs);
       } else if (unnamedArgs.length > 0) {
         //we have 1 or more unnamed arguments. let's pass those as individual args to function
-        printOutput(func.apply(null, unnamedArgs));
+        func.apply(null, unnamedArgs);
       } else {
         //no extra arguments given to pass to function. let's just run it
-        printOutput(func());
+        func();
       }
     }
 

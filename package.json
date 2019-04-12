@@ -1,6 +1,6 @@
 {
-  "name": "make-runnable",
-  "version": "1.3.6",
+  "name": "@cellense/make-runnable",
+  "version": "1.0.0",
   "description": "Call a module's exported functions directly from the command line, with arguments.",
   "main": "index.js",
   "scripts": {
@@ -19,11 +19,11 @@
     "expose",
     "shell"
   ],
-  "author": "Arjun Khoosal",
+  "author": "Arjun Khoosal, Matus Congrady",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/super-cache-money/make-runnable"
+    "url": "https://github.com/Cellense/make-runnable"
   },
   "dependencies": {
     "bluebird": "^3.5.0",
